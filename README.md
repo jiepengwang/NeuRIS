@@ -1,9 +1,30 @@
 # NeuRIS
-We propose a new method, dubbed NeuRIS, for high quality reconstruction of indoor scenes. The key idea of NeuRIS is to integrate estimated normal vectors of indoor scenes as a prior in a neural rendering framework for reconstructing large texture-less shapes and, importantly, does so in an adaptive manner to also enable the reconstruction of irregular shapes with fine details.
+We propose a new method, dubbed NeuRIS, for high quality reconstruction of indoor scenes. 
+
+![](./doc/teaser.png)
+
+## [Project page](https://jiepengwang.github.io/NeuRIS/) |  [Paper](https://arxiv.org/abs/2206.13597) | [Data]
 
 
-## [Project page](https://jiepengwang.github.io/NeuRIS/) |  [Paper] | [Data]
-Code is coming soon...
+### Setup
+```
+conda create -n neuris python=3.8
+conda activate neuris
+conda install pytorch=1.9.0 torchvision torchaudio cudatoolkit=10.2 -c pytorch
+pip install -r requirements.txt
+```
+
+
+### Training
+
+```
+python ./exp_runner.py --mode train --conf ./confs/neuris.conf --gpu 0 --scene_name scene0625_00
+```
+
+### TODO
+* Add evaluation code
+* Add data preprocessing code
+
 
 ## Citation
 
@@ -13,7 +34,7 @@ Cite as below if you find this repository is helpful to your project:
 @article{wang2022neuris,
       	title={NeuRIS: Neural Reconstruction of Indoor Scenes Using Normal Priors}, 
       	author={Wang, Jiepeng and Wang, Peng and Long, Xiaoxiao and Theobalt, Christian and Komura, Taku and Liu, Lingjie and Wang, Wenping},
-	journal={arXiv preprint},
+	publisher = {arXiv},
       	year={2022}
 }
 ```
