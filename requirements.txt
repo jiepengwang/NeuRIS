@@ -11,3 +11,7 @@ open3d
 tensorboard
 scikit-image
 setuptools==59.5.0
+lpips
+numba
+pyrender
+pycuda
