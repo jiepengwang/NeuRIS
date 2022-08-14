@@ -53,7 +53,7 @@ python ./exp_runner.py --mode train --conf ./confs/neuris.conf --gpu 0 --scene_n
 
 ### Mesh extraction
 ```
-python exp_runner.py --mode validate_mesh --conf <config_file> --case <scene_name> --is_continue
+python exp_runner.py --mode validate_mesh --conf <config_file> --is_continue
 ```
 
 ### Evaluation
