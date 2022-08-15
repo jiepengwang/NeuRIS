@@ -9,7 +9,7 @@ We propose a new method, dubbed NeuRIS, for high quality reconstruction of indoo
 ## Usage
 
 #### Data preparation
-Scene data used in NeuRIS can be downloaded from [here](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/jiepeng_connect_hku_hk/ElKcK1sus9pLnARZ_e9l-IcBS6cE-6w8xt34bMsvMAiuIQ?e=0z1eka) and extract the scene data into folder 'dataset/indoor'. And the scene data used in [ManhattanSDF](https://github.com/zju3dv/manhattan_sdf) are also included for convenient comparisons.
+Scene data used in NeuRIS can be downloaded from [here](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/jiepeng_connect_hku_hk/ElKcK1sus9pLnARZ_e9l-IcBS6cE-6w8xt34bMsvMAiuIQ?e=0z1eka) and extract the scene data into folder `dataset/indoor`. And the scene data used in [ManhattanSDF](https://github.com/zju3dv/manhattan_sdf) are also included for convenient comparisons.
 The data is organized as follows:
 ```
 <scene_name>
@@ -34,7 +34,7 @@ The data is organized as follows:
 |-- trans_n2w.txt       # transformation matrix from normalized coordinates to world coordinates
 ```
 
-Refer to the [file](https://github.com/jiepengwang/NeuRIS/blob/main/preprocess/README.md) for more details about data preparation of Scannet or private data.
+Refer to the [file](https://github.com/jiepengwang/NeuRIS/blob/main/preprocess/README.md) for more details about data preparation of ScanNet or private data.
 
 
 ### Setup

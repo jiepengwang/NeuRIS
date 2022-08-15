@@ -28,7 +28,7 @@ if __name__ == '__main__':
     dataset_type = args.data_type
     
     if dataset_type == 'scannet':
-        dir_root_scannet = '/media/hp/HKUCS2/Dataset/ScanNet/scannet_nerfingmvs'
+        dir_root_scannet = '/media/hp/HKUCS2/Dataset/ScanNet'
         dir_root_neus = f'{dir_root_scannet}/sample_neus'
 
         for scene_name in lis_name_scenes:
