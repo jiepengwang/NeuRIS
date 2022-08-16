@@ -1,3 +1,4 @@
+# some snippets are borrowed from https://github.com/baegwangbin/surface_normal_uncertainty
 import numpy as np
 import torch
 from pathlib import Path

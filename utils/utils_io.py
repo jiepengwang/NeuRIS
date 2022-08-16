@@ -164,6 +164,12 @@ def get_time_str(fmt='HMSM'):
         str_time = datetime.now().strftime("%H_%M_%S_%f")
     return str_time
 
+def write_list_to_txt(path_list, data_list):
+    num_lines = len(data_list)
+    with open(path_list, 'w') as flis:
+        for i in range(len(data_list)):
+            flis.write(f'{data_list[i]}\n')
+            
 if __name__ == "__main__":
     logging.basicConfig(
         format='%(asctime)s | %(levelname)s | %(name)s | %(message)s',

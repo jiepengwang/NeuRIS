@@ -82,7 +82,14 @@ def read_images(dir, target_img_size = None, interpolation=cv2.INTER_LINEAR, img
         imgs: N*W*H
         img_stems
     '''
-    read_img = lambda path : read_image(path) if not img_ext == '.npz' else np.load(path)['arr_0']
+    if img_ext == '.npy':
+        read_img = lambda path : np.load(path)
+    elif img_ext == '.npz':
+        read_img = lambda path : np.load(path)['arr_0']
+    elif img_ext in ['.png', '.jpg']:
+        read_img = lambda path : read_image(path)
+    else:
+        raise NotImplementedError
 
     vec_path = sorted(glob.glob(f"{dir}/**{img_ext}"))
     if vec_stems is not None:
@@ -648,11 +655,17 @@ def crop_images(dir_images_origin, dir_images_crop, crop_size, img_ext = '.png')
         crop_height_half = (H_origin-H_target) //2
         assert (W_origin-W_target)%2 ==0 and (H_origin- H_target) %2 == 0
         
-        img_crop = img_curr[crop_height_half:H_origin-crop_height_half, crop_width_half:W_origin-crop_width_half, :]
-        write_image(f'{dir_images_crop}/{i*10:04d}.png', img_crop)
+        img_crop = img_curr[crop_height_half:H_origin-crop_height_half, crop_width_half:W_origin-crop_width_half]
+        if img_ext == '.png':
+            write_image(f'{dir_images_crop}/{stems_img[i]}.png', img_crop)
+        elif img_ext == '.npy':
+            np.save(f'{dir_images_crop}/{stems_img[i]}.npy', img_crop)
+        else:
+            raise NotImplementedError
+        
     return crop_width_half, crop_height_half
 
-# def split_video_to_frames(path_video, dir_images):
+def split_video_to_frames(path_video, dir_images):
     IOUtils.ensure_dir_existence(dir_images)
     vidcap = cv2.VideoCapture(path_video)
     success,image = vidcap.read()
