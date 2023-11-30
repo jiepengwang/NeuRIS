@@ -1,4 +1,4 @@
-# NeuRIS
+# NeuRIS (ECCV 2022)
 We propose a new method, dubbed NeuRIS, for high quality reconstruction of indoor scenes. 
 
 ![](./doc/teaser.png)
@@ -65,10 +65,12 @@ python ./exp_evaluation.py --mode eval_3D_mesh_metrics
 Cite as below if you find this repository is helpful to your project:
 
 ```
-@article{wang2022neuris,
-      	title={NeuRIS: Neural Reconstruction of Indoor Scenes Using Normal Priors}, 
-      	author={Wang, Jiepeng and Wang, Peng and Long, Xiaoxiao and Theobalt, Christian and Komura, Taku and Liu, Lingjie and Wang, Wenping},
-	journal={arXiv preprint arXiv:2206.13597},
-	year={2022}
+@inproceedings{wang2022neuris,
+  title={Neuris: Neural reconstruction of indoor scenes using normal priors},
+  author={Wang, Jiepeng and Wang, Peng and Long, Xiaoxiao and Theobalt, Christian and Komura, Taku and Liu, Lingjie and Wang, Wenping},
+  booktitle={European Conference on Computer Vision},
+  pages={139--155},
+  year={2022},
+  organization={Springer}
 }
 ```
