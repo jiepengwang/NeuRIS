@@ -3,7 +3,7 @@ We propose a new method, dubbed NeuRIS, for high quality reconstruction of indoo
 
 ![](./doc/teaser.png)
 
-## [Project page](https://jiepengwang.github.io/NeuRIS/) |  [Paper](https://arxiv.org/abs/2206.13597) | [Data](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/jiepeng_connect_hku_hk/Er7bpbBAxMBBnZfDvdvrO1kBu2tkTpnMw9XXfeuQzkwOlA?e=Yf0Bbj)
+## [Project page](https://jiepengwang.github.io/NeuRIS/) |  [Paper](https://arxiv.org/abs/2206.13597) | [Data](https://1drv.ms/f/c/0beb177a0003262c/EiwmAwB6F-sggAsiBAAAAAABb0F_gavzzsqE4MLdqmkhgw?e=4hVszO)
 
 
 ## Usage
